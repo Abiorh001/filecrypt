@@ -23,6 +23,7 @@ Welcome to the documentation for the File Encryption System. This system is desi
 - Users upload files, folders, or input text for encryption.
 - A unique key is generated for each file or folder.
 - Files and folders are encrypted using a strong symmetric encryption algorithm (e.g., AES).
+- Paid User can choose the type of encrption algorithm they want from the list
 - Encrypted content and metadata (filename, hashed key, user ID) are stored in the database.
 
 ### 4. File and Key Sharing:
