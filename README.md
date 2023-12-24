@@ -6,100 +6,114 @@ Welcome to the documentation for the File Encryption System. This system is desi
 
 ## User Workflow and Activities
 
-### 1. User Registration and Key Generation:
+## 1. User Registration and Authentication:
 
-- Users register on the platform.
-- A unique encryption key is generated for the user during registration.
-- The key is securely stored, potentially using a dedicated hardware module or user-managed key approach.
+- **Feature:** Users register and authenticate on the platform.
+  
+  - **Benefit:** Registration enables users to create unique accounts and access the full suite of encryption features after authentication.
+  - **Additional Details:** Role-based access controls, user/group permissions, and compartmentalized data access implemented between teams to enhance security.
 
-### 2. File, Folder, or Text Encryption:
+## 2. User Workspace and Team Collaboration:
 
-- Users interact with the system to choose between file, folder, or text encryption.
-- For folder encryption, a recursive process handles files within the folder.
-- The system maintains the folder structure during encryption.
+- **Feature:** After registration, users can create workspaces and add team members.
+- **Benefit:** Facilitates organized collaboration within specific workspaces, ensuring data segregation and enhanced privacy.
 
-### 3. File Upload and Encryption:
+- **Additional Detail:** Team members can securely access encrypted files within the workspace, and collaboration is further secured through individual user authentication.
 
-- Users upload files, folders, or input text for encryption.
-- A unique key is generated for each file or folder.
-- Files and folders are encrypted using a strong symmetric encryption algorithm (e.g., AES).
-- Paid User can choose the type of encrption algorithm they want from the list
-- Encrypted content and metadata (filename, hashed key, user ID) are stored in the database.
+## 3. File, Folder, or Text Encryption:
 
-### 4. File and Key Sharing:
+- **Feature:** Users interact with the system to choose between file, folder, or text encryption.
+- **Benefit:** Provides flexibility to secure different types of data based on user requirements.
 
-- Users have the option to share encrypted files with others.
-- Secure mechanisms are in place for sharing files, such as generating temporary links or requiring user authentication for access.
-- Users can securely share encryption keys with trusted individuals.
+- **Additional Detail:** The recursive process for folder encryption ensures that all files within the folder are encrypted, and the system maintains the original folder structure during encryption for user convenience.
 
-### 5. File Retrieval and Decryption:
+## 4. File Upload and Encryption:
 
-- Users log in securely.
-- They select a file for retrieval.
-- During retrieval, the user inputs their encryption key.
-- The input key is hashed and compared to the stored hash in the database.
-- If the keys match, the original key is used to decrypt the file.
+- **Feature:** Users upload files, folders, or input text for encryption.
+- **Benefit:** Enables users to secure their data with a unique key using a strong symmetric encryption algorithm (e.g., AES).
 
-### 6. Secure Download Options:
+- **Additional Detail:** Paid users have the option to choose their preferred encryption algorithm from a provided list, tailoring the level of security to their specific needs. Encrypted content and metadata are stored in the database for future retrieval.
 
-- Users have options to securely download the decrypted file.
-- Secure temporary links or direct download options are provided.
+## 5. File and Key Sharing:
 
-### 7. Optional Email Integration:
+- **Feature:** Users have the option to share encrypted files with others.
+- **Benefit:** Facilitates secure sharing through mechanisms like temporary links or user authentication, ensuring controlled access to shared files.
 
-- Users can choose to receive decrypted files via email.
-- Secure email protocols and end-to-end encryption are considered for email communication.
+- **Additional Detail:** Users can securely share encryption keys with trusted individuals, enhancing collaboration while maintaining security.
 
-### 8. User Workspace and Team Collaboration:
+## 6. File Retrieval and Decryption:
 
-- After registration, users can create workspaces and add team members.
-- Team members can access encrypted files within the workspace.
-- Workspace collaboration is secured with individual user authentication.
+- **Feature:** Users log in securely and retrieve files based on filename, filetag, or date uploaded.
+- **Benefit:** Ensures authorized users can securely retrieve and decrypt their files.
 
-### 9. Scheduled Encryption and Decryption:
+- **Additional Detail:** The retrieval process involves user input of the encryption key. If the keys match, the file is decrypted, ensuring only authorized users can access the content.
 
-- Users can schedule the time and date for file encryption or decryption.
-- During the file upload process, users have the option to set a specific time and date for the encryption to occur automatically.
-- For decrypted files, users can schedule when the decryption process should take place.
-- The scheduling feature enhances user control and ensures that encryption or decryption aligns with their preferred timelines.
+## 7. Secure Download Options:
 
-### 10. Notification System:
+- **Feature:** Users can view the content of their file and securely download the decrypted file.
+- **Benefit:** Provides users with secure options, including temporary links or direct downloads, ensuring the integrity of the downloaded content.
 
-- A notification system informs users about the scheduled encryption or decryption events.
-- Users receive alerts in advance to confirm or modify scheduled tasks.
-- Notifications may include details such as the file name, scheduled time, and the current status of the task.
+## 8. Optional Email Integration:
 
-### 11. User-Controlled Key Management:
+- **Feature:** Users can choose to receive their encryption key via email or text-message.
+- **Benefit:** Offers convenient delivery options based on user preferences, with a focus on secure email protocols and end-to-end encryption.
 
-- Users can manage and rotate their encryption keys.
-- Users are educated on best practices for key management.
+## 9. Scheduled Encryption and Decryption:
 
-### 12. File Management and Tagging:
+- **Feature:** Users can schedule file encryption or decryption.
+- **Benefit:** Automation enhances user control, allowing encryption or decryption to align with preferred timelines.
 
-- Users can organize and manage their encrypted files through a comprehensive file management system.
-- Tagging functionality allows users to add descriptive tags to files for easy tracking and searching.
+- **Additional Detail:** Users can set a specific time and date for automatic encryption during the file upload process. The scheduling feature ensures flexibility and efficiency in managing encryption or decryption tasks.
 
-### 13. Size Limits and Communication:
+## 10. Alerts and Notifications:
 
-- Size limits are implemented for uploads to manage server resources.
-- Clear communication of size limits to users.
-- Secure communication channels are maintained throughout the process.
+- **Feature:** Users receive alerts for various actions, including file access activity.  
+- **Benefit:** Keeps users informed in real-time, enabling timely actions.
 
-### 14. User Limits for Free Accounts:
+- **Additional Detail:** 
+  - Alerts include details such as source IP address, file accessed, and timestamp to support security investigations.
 
-- Free users are limited in the number of encryption keys they can generate per month.
-- There are file size limits imposed on uploads for free users.
-- A total storage space limit is defined for free users.
+## 11. User-Controlled Key Management:
 
-### 15. Logging and Auditing:
+- **Feature:** Users manage and can rotate their encryption keys.
+- **Benefit:** Empowers users to actively participate in their security by managing and rotating encryption keys.
 
-- The system logs user activities, especially key-related operations.
-- Regular auditing of logs for security and compliance.
+- **Additional Detail:** Users are educated on best practices for key management, ensuring they make informed decisions about their encryption keys.
 
-### 16. Security Audits and Continuous Improvement:
+## 12. File Management and Tagging:
 
-- Regular security audits are conducted to identify and address vulnerabilities.
-- User feedback is collected to inform continuous improvements to the system.
+- **Feature:** Users can organize and manage their encrypted files through a comprehensive file management system.
+- **Benefit:** Tagging functionality allows users to add descriptive tags to files for easy tracking and searching.
+
+- **Additional Detail:** File organization is enhanced through tagging, providing users with efficient tools for managing and locating their encrypted files.
+
+## 13. Size Limits and Communication:
+
+- **Feature:** Size limits are implemented for uploads to manage server resources.
+- **Benefit:** Efficiently manages server resources and ensures clear communication of size limits to users.
+
+- **Additional Detail:** Throughout the upload process, secure communication channels are maintained to safeguard data integrity.
+
+## 14. User Limits for Free Accounts:
+
+- **Feature:** Free users have limitations on the number of encryption keys, encryption algorithms, file sizes, workspaces, team members, and total storage space.
+- **Benefit:** Balances usability with resource considerations for free accounts.
+
+- **Additional Detail:** Free users are provided with clear limits on various features, encouraging them to explore premium options for expanded capabilities.
+
+## 15. Logging and Auditing:
+
+- **Feature:** The system logs user activities, especially key-related operations.
+- **Benefit:** Regular auditing of logs contributes to security and compliance.
+
+- **Additional Detail:** Regular auditing ensures a comprehensive record of user actions, providing valuable insights for security and compliance purposes.
+
+## 16. Security Audits and Continuous Improvement:
+
+- **Feature:** Regular security audits are conducted to identify and address vulnerabilities.
+- **Benefit:** Ensures a consistently high level of system security and user satisfaction.
+
+- **Additional Detail:** User feedback is actively collected and used to inform continuous improvements to the system, enhancing overall user experience and security.
 
 ## Visual Representation (Complete Workflow)
 
@@ -228,6 +242,24 @@ The File Encryption System follows a modular monolithic architecture. Key compon
 
 The system is containerized using Docker, allowing for easy deployment and scaling. Each component runs in a separate container, facilitating modularity and scalability. Docker Compose can be utilized to manage multiple containers as a single application.
 
-## Conclusion
+## Client Services/SDK for Developers
+Developers can seamlessly integrate the File Encryption System into their applications and systems using the provided Client Services/SDK. This ensures efficient collaboration and interoperability.
 
-The File Encryption System provides a robust and secure solution for users to manage their encrypted files. Its modular monolithic architecture, coupled with Dockerization, ensures scalability and easy deployment. Regular security audits and continuous improvement based on user feedback contribute to maintaining a high level of security and user satisfaction.
+## Educational Information Section
+To enhance user understanding and promote best practices, the File Encryption System includes an educational information section. This section covers key topics such as:
+
+- Key generation best practices
+- Encryption process awareness
+- Benefits and security considerations of email integration
+- Leveraging scheduling features effectively
+- Best practices for key management
+- Benefits of file organization and tagging
+- Clear communication on size limits
+- Understanding the limits associated with free accounts
+- Importance of activity logs and auditing
+- Security measures and continuous enhancement efforts
+
+
+## Conclusion
+The File Encryption System stands as a secure, user-friendly solution for managing encrypted files. Its modular monolithic architecture, coupled with Dockerization, ensures scalability and easy deployment. Continuous improvement, based on regular security audits and user feedback, maintains a high level of security and user satisfaction. The provision of educational resources empowers users with the knowledge needed for secure and effective use of the system.
+
